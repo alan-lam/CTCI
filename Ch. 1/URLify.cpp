@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+/* Replace all spaces in a string with "%20" */
+
 int main() {
    std::string ret = "";
    std::string s;
