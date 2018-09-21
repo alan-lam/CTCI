@@ -13,9 +13,9 @@ public class IsUnique {
       System.out.println(unique_2(s));
    }
 
-   /* Hashmap O(N)*/
-   public static boolean unique_1 (String s) {
-      HashMap<char, int> map = new HashMap<>();
+   /* Hashmap O(N) */
+   public static boolean unique_1(String s) {
+      HashMap<Character, Integer> map = new HashMap<>();
       char[] c = s.toCharArray();
       for (int i = 0; i < c.length; i++) {
          if (map.containsKey(c[i])) {
@@ -28,8 +28,8 @@ public class IsUnique {
       return true;
    }
 
-   /* Sort O(N log N)*/
-   public static boolean unique_2 (String s) {
+   /* Sort O(N log N) */
+   public static boolean unique_2(String s) {
       char[] c = s.toCharArray();
       Arrays.sort(c);
       for (int i = 0; i < c.length-1; i++) {

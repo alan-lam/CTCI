@@ -1,5 +1,7 @@
+# Check if one string is a permutation of another
+
 # Sort O(N log N)
-def checkPermutation_1 (s1, s2):
+def checkPermutation_1(s1, s2):
     if len(s1) != len(s2):
         return False
     t1 = "".join(sorted(s1))
@@ -10,7 +12,7 @@ def checkPermutation_1 (s1, s2):
     return True
 
 # Dictionary O(N)
-def checkPermutation_2 (s1, s2):
+def checkPermutation_2(s1, s2):
     if len(s1) != len(s2):
         return False
     d = {}
