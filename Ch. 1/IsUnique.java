@@ -6,7 +6,7 @@ import java.util.*;
 
 public class IsUnique {
 
-   public static void main (String[] args) {
+   public static void main(String[] args) {
       Scanner scanner = new Scanner(System.in);
       String s = scanner.next();
       System.out.println(unique_1(s));
