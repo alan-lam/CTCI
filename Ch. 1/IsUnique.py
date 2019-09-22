@@ -1,6 +1,6 @@
 # Check if a string has unique characters
 
-# dictionary O(n)
+# Dictionary O(n)
 def unique_1(check_str):
     freq_dict = {}
     
@@ -11,7 +11,7 @@ def unique_1(check_str):
             freq_dict[char] = 1
     return True
 
-# sort O(n log n)
+# Sort O(n log n)
 def unique_2(check_str):
     sorted_str_list = sorted(check_str)
 
