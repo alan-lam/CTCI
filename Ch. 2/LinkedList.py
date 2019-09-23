@@ -12,18 +12,24 @@ class DoublyNode(Node):
 
 class LinkedList():
     
-    def __init__(self, list_values):
-        self.head = Node(list_values[0])
-        curr = self.head
-        for value in list_values[1:]:
-            curr.next = Node(value)
-            curr = curr.next 
+    def __init__(self, list_values=[]):
+        if len(list_values) == 0:
+            self.head = None
+        else:
+            self.head = Node(list_values[0])
+            curr = self.head
+            for value in list_values[1:]:
+                curr.next = Node(value)
+                curr = curr.next 
 
     def append(self, value):
-        curr = self.head
-        while curr.next is not None:
-            curr = curr.next
-        curr.next = Node(value)
+        if self.head is None:
+            self.head = Node(value)
+        else:
+            curr = self.head
+            while curr.next is not None:
+                curr = curr.next
+            curr.next = Node(value)
 
     def printList(self):
         curr = self.head
@@ -34,20 +40,26 @@ class LinkedList():
 
 class DoublyLinkedList():
 
-    def __init__(self, list_values):
-        self.head = DoublyNode(list_values[0])
-        curr = self.head
-        for value in list_values[1:]:
-            curr.next = DoublyNode(value)
-            curr.next.prev = curr
-            curr = curr.next 
+    def __init__(self, list_values=[]):
+        if len(list_values) == 0:
+            self.head = None
+        else:
+            self.head = DoublyNode(list_values[0])
+            curr = self.head
+            for value in list_values[1:]:
+                curr.next = DoublyNode(value)
+                curr.next.prev = curr
+                curr = curr.next 
 
     def append(self, value):
-        curr = self.head
-        while curr.next is not None:
-            curr = curr.next
-        curr.next = Node(value)
-        curr.next.prev = curr
+        if self.head is None:
+            self.head = DoublyNode(value)
+        else:
+            curr = self.head
+            while curr.next is not None:
+                curr = curr.next
+            curr.next = DoublyNode(value)
+            curr.next.prev = curr
 
     def printList(self):
         curr = self.head
@@ -57,6 +69,9 @@ class DoublyLinkedList():
         print()
 
     def printListReverse(self):
+        if self.head is None:
+            print()
+            return
         curr = self.head
         while curr.next is not None:
             curr = curr.next
