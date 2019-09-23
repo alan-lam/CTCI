@@ -28,8 +28,9 @@ class LinkedList():
     def printList(self):
         curr = self.head
         while curr is not None:
-            print(curr.value)
+            print(curr.value, end=' ')
             curr = curr.next
+        print()
 
 class DoublyLinkedList():
 
@@ -51,8 +52,9 @@ class DoublyLinkedList():
     def printList(self):
         curr = self.head
         while curr is not None:
-            print(curr.value)
+            print(curr.value, end=' ')
             curr = curr.next
+        print()
 
     def printListReverse(self):
         curr = self.head
